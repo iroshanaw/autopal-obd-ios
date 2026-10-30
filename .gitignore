@@ -1,0 +1,22 @@
+# Xcode
+.DS_Store
+*/.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# App & Environment
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Temporary / OS
+.Spotlight-V100
+.Trashes
+Thumbs.db

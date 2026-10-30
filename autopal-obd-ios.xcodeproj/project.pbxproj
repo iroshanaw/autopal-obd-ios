@@ -6,14 +6,76 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		288CAB1F309309F2002C088C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288CAB1E309309F2002C088C /* WidgetKit.framework */; };
+		288CAB21309309F2002C088C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288CAB20309309F2002C088C /* SwiftUI.framework */; };
+		288CAB2C309309F3002C088C /* AutopalWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 288CAB1C309309F2002C088C /* AutopalWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		288CAB96309309F2002C088C /* AutopalCore in Frameworks */ = {isa = PBXBuildFile; productRef = 288CAB98309309F2002C088C /* AutopalCore */; };
+		288CAB97309309F2002C088C /* AutopalCore in Frameworks */ = {isa = PBXBuildFile; productRef = 288CAB98309309F2002C088C /* AutopalCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		288CAB2A309309F3002C088C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 288CAB1B309309F2002C088C;
+			remoteInfo = AutopalWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		288CAB31309309F3002C088C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				288CAB2C309309F3002C088C /* AutopalWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* autopal-obd-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "autopal-obd-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		288CAB1C309309F2002C088C /* AutopalWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutopalWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		288CAB1E309309F2002C088C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
+		288CAB20309309F2002C088C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
+		288CAB32309309FA002C088C /* AutopalWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutopalWidgetsExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		288CAB16309309D7002C088C /* Exceptions for "autopal-obd-ios" folder in "autopal-obd-ios" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 000000000000000100000000 /* autopal-obd-ios */;
+		};
+		288CAB30309309F3002C088C /* Exceptions for "AutopalWidgets" folder in "AutopalWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 288CAB1B309309F2002C088C /* AutopalWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		000000000000000000000010 /* autopal-obd-ios */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				288CAB16309309D7002C088C /* Exceptions for "autopal-obd-ios" folder in "autopal-obd-ios" target */,
+			);
 			path = "autopal-obd-ios";
+			sourceTree = "<group>";
+		};
+		288CAB22309309F2002C088C /* AutopalWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				288CAB30309309F3002C088C /* Exceptions for "AutopalWidgets" folder in "AutopalWidgetsExtension" target */,
+			);
+			path = AutopalWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -22,6 +84,15 @@
 		000000000000000130000000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				288CAB97309309F2002C088C /* AutopalCore in Frameworks */,
+			);
+		};
+		288CAB19309309F2002C088C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				288CAB96309309F2002C088C /* AutopalCore in Frameworks */,
+				288CAB21309309F2002C088C /* SwiftUI.framework in Frameworks */,
+				288CAB1F309309F2002C088C /* WidgetKit.framework in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -30,7 +101,10 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				288CAB32309309FA002C088C /* AutopalWidgetsExtension.entitlements */,
 				000000000000000000000010 /* autopal-obd-ios */,
+				288CAB22309309F2002C088C /* AutopalWidgets */,
+				288CAB1D309309F2002C088C /* Frameworks */,
 				000000000000000000000020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,8 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				000000000000000000000120 /* autopal-obd-ios.app */,
+				288CAB1C309309F2002C088C /* AutopalWidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		288CAB1D309309F2002C088C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				288CAB1E309309F2002C088C /* WidgetKit.framework */,
+				288CAB20309309F2002C088C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -53,16 +137,44 @@
 				000000000000000120000000 /* Sources */,
 				000000000000000130000000 /* Frameworks */,
 				000000000000000140000000 /* Resources */,
+				288CAB31309309F3002C088C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				288CAB2B309309F3002C088C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				000000000000000000000010 /* autopal-obd-ios */,
 			);
 			name = "autopal-obd-ios";
+			packageProductDependencies = (
+				288CAB98309309F2002C088C /* AutopalCore */,
+			);
 			productName = MyApp;
 			productReference = 000000000000000000000120 /* autopal-obd-ios.app */;
 			productType = "com.apple.product-type.application";
+		};
+		288CAB1B309309F2002C088C /* AutopalWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 288CAB2D309309F3002C088C /* Build configuration list for PBXNativeTarget "AutopalWidgetsExtension" */;
+			buildPhases = (
+				288CAB18309309F2002C088C /* Sources */,
+				288CAB19309309F2002C088C /* Frameworks */,
+				288CAB1A309309F2002C088C /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				288CAB22309309F2002C088C /* AutopalWidgets */,
+			);
+			name = AutopalWidgetsExtension;
+			packageProductDependencies = (
+				288CAB98309309F2002C088C /* AutopalCore */,
+			);
+			productName = AutopalWidgetsExtension;
+			productReference = 288CAB1C309309F2002C088C /* AutopalWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -71,11 +183,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
+				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					000000000000000100000000 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					288CAB1B309309F2002C088C = {
+						CreatedOnToolsVersion = 27.0;
 					};
 				};
 			};
@@ -88,18 +203,27 @@
 			);
 			mainGroup = 000000000000000000000001;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				288CAB99309309F2002C088C /* XCLocalSwiftPackageReference "AutopalCore" */,
+			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 000000000000000000000020 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				000000000000000100000000 /* autopal-obd-ios */,
+				288CAB1B309309F2002C088C /* AutopalWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		000000000000000140000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		288CAB1A309309F2002C088C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -112,7 +236,20 @@
 			files = (
 			);
 		};
+		288CAB18309309F2002C088C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		288CAB2B309309F3002C088C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 288CAB1B309309F2002C088C /* AutopalWidgetsExtension */;
+			targetProxy = 288CAB2A309309F3002C088C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		000000000000000011000000 /* Debug configuration for PBXProject "autopal-obd-ios" */ = {
@@ -250,12 +387,17 @@
 		000000000000000111000000 /* Debug configuration for PBXNativeTarget "autopal-obd-ios" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "autopal-obd-ios/autopal-obd-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "autopal-obd-ios/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Autopal connects to your OBD adapter to read your car's health.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Autopal connects to Wi-Fi OBD adapters on your local network.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -266,10 +408,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "devplaceholder.$(PROJECT_UNIQUE_VALUE:identifier).$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.autopal.obd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -279,7 +423,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
@@ -287,12 +431,17 @@
 		000000000000000112000000 /* Release configuration for PBXNativeTarget "autopal-obd-ios" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "autopal-obd-ios/autopal-obd-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "autopal-obd-ios/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Autopal connects to your OBD adapter to read your car's health.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Autopal connects to Wi-Fi OBD adapters on your local network.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -303,10 +452,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "devplaceholder.$(PROJECT_UNIQUE_VALUE:identifier).$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.autopal.obd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -316,8 +467,92 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		288CAB2E309309F3002C088C /* Debug configuration for PBXNativeTarget "AutopalWidgetsExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AutopalWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutopalWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AutopalWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.autopal.obd.AutopalWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		288CAB2F309309F3002C088C /* Release configuration for PBXNativeTarget "AutopalWidgetsExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AutopalWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutopalWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AutopalWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.autopal.obd.AutopalWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 27.0;
 			};
 			name = Release;
 		};
@@ -340,7 +575,30 @@
 			);
 			defaultConfigurationName = Release;
 		};
+		288CAB2D309309F3002C088C /* Build configuration list for PBXNativeTarget "AutopalWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				288CAB2E309309F3002C088C /* Debug configuration for PBXNativeTarget "AutopalWidgetsExtension" */,
+				288CAB2F309309F3002C088C /* Release configuration for PBXNativeTarget "AutopalWidgetsExtension" */,
+			);
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		288CAB99309309F2002C088C /* XCLocalSwiftPackageReference "AutopalCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = AutopalCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		288CAB98309309F2002C088C /* AutopalCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 288CAB99309309F2002C088C /* XCLocalSwiftPackageReference "AutopalCore" */;
+			productName = AutopalCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 000000000000000000000000 /* Project object */;
 }

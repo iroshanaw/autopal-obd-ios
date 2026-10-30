@@ -1,0 +1,4 @@
+is_can,reply_lines,expected_vin,note
+true,014|0:490201314847|1:434D3832363333|2:41303034333532,1HGCM82633A004352,CAN multi-frame: 0x014 = 20 bytes = 49 02 01 + 17 chars
+false,490201000000 31|4902024847434D|490203383236 33|49020433 413030|4902053433 3532,1HGCM82633A004352,"non-CAN: 5 lines 49 02 NN + 4 bytes; leading zero bytes dropped"
+true,NO DATA,,VIN unsupported: expect null

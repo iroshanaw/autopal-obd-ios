@@ -1,0 +1,22 @@
+group,is_can,reply_lines,expected_codes,note
+single_bytes,,0133,P0133,"top 2 bits 00 = P, next 2 bits 00 = 0, then 1,3,3"
+single_bytes,,0300,P0300,random misfire
+single_bytes,,0420,P0420,catalyst efficiency below threshold bank 1
+single_bytes,,0171,P0171,system too lean bank 1
+single_bytes,,1234,P1234,"bits 00|01 -> P1: manufacturer-specific"
+single_bytes,,4123,C0123,top 2 bits 01 = C (chassis)
+single_bytes,,8234,B0234,top 2 bits 10 = B (body)
+single_bytes,,C1A1,U01A1,top 2 bits 11 = U (network)
+single_bytes,,D1A1,U11A1,"11|01 -> U1"
+single_bytes,,0000,-,padding: not a code
+mode03,true,4300,-,CAN: count 0
+mode03,true,43010133,P0133,CAN single frame
+mode03,true,008|0:430301330300|1:0420AAAAAAAAAA,P0133|P0300|P0420,CAN multi-frame; padding after declared length ignored
+mode03,true,4301030F|4301030F,P030F,"two ECUs report the same code: de-duplicate"
+mode03,true,43010300|43010700,P0300|P0700,"engine ECU + transmission ECU: merge"
+mode03,false,43013301710000,P0133|P0171,non-CAN: 3 codes per line zero padded no count byte
+mode03,false,43013303000420|43017100000000,P0133|P0300|P0420|P0171,non-CAN: second line continues
+mode03,false,43000000000000,-,non-CAN no codes
+mode07,true,47010171,P0171,pending
+mode07,true,NO DATA,-,NO DATA on 03/07 means no codes
+mode07,false,47017100000000,P0171,non-CAN pending
